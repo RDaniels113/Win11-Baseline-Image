@@ -1,5 +1,9 @@
 # Windows 11 Baseline Image Deployment (VMware → NVMe)
 
+---
+[← Back to README](../README.md) | [Tools](tools.md)
+---
+
 ## Overview
 Create a Windows 11 golden image in VMware Workstation, then deploy it to physical NVMe drives. This workflow avoids USB install blocks, TPM/SID pitfalls, Outlook errors, and WinRE partition traps. The result is a clean, sysprep-ready, repeatable image.
 
