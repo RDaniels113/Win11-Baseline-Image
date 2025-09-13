@@ -32,4 +32,4 @@ This workflow saves hours by producing a **repeatable baseline image** that scal
 - Disable WinRE before sysprep to prevent partition resizing issues; recreate later if needed.  
 
 ## Full Guide  
-See [`/docs/full_guide.md`](docs/full_guide.md) for detailed step-by-step instructions, troubleshooting notes, and post-deployment setup.  
+See [`/docs//Win11-Image-FullGuide.md`](docs/Win11-Image-FullGuide.md) for detailed step-by-step instructions, troubleshooting notes, and post-deployment setup.  
