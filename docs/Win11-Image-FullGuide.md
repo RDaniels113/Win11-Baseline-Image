@@ -223,3 +223,7 @@ exit
 ## Final Notes
 
 This workflow produces a **clean, replicable Windows 11 image** for NVMe deployment. It avoids USB blocks, TPM/SID mismatches, Outlook profile errors, and WinRE partition issues, giving users a stable baseline they can customize post-deployment.
+
+---
+[← Back to README](../README.md) | [Tools](tools.md)
+---
