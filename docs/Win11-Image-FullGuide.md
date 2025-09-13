@@ -4,6 +4,22 @@
 [← Back to README](../README.md) | [Tools](tools.md)
 ---
 
+## Table of Contents
+- [Overview](#overview)
+- [Problem Statement](#problem-statement)
+- [Solution: VMware VM Workflow](#solution-vmware-vm-workflow)
+  - [Phase 1: VM Creation & OOBE Bypass](#phase-1-vm-creation--oobe-bypass)
+  - [Phase 2: Golden Image Configuration](#phase-2-golden-image-configuration)
+  - [Phase 3: Sysprep Preparation](#phase-3-sysprep-preparation)
+  - [Phase 4: VM to Physical Deployment](#phase-4-vm-to-physical-deployment)
+  - [Phase 5: Testing & Validation](#phase-5-testing--validation)
+- [Troubleshooting Notes](#troubleshooting-notes)
+- [Post-Deployment User Setup](#post-deployment-user-setup)
+- [Benefits](#benefits)
+- [Lessons Learned](#lessons-learned)
+- [Tools Required](#tools-required)
+- [Final Notes](#final-notes)
+
 ## Overview
 Create a Windows 11 golden image in VMware Workstation, then deploy it to physical NVMe drives. This workflow avoids USB install blocks, TPM/SID pitfalls, Outlook errors, and WinRE partition traps. The result is a clean, sysprep-ready, repeatable image.
 
@@ -35,6 +51,7 @@ oobe\bypassnro
 - VM Settings → enable "Connect at power on"
 - Connect to internet (stay on local account; do not sign into Microsoft)
 
+[Back to Top](#table-of-contents)
 ---
 
 ## Phase 2: Golden Image Configuration
@@ -54,6 +71,7 @@ VMware Tools drivers/services can cause errors after sysprep when the image is c
 - No Microsoft Store downloads or installs (breaks sysprep)
 - No personal apps (ChatGPT, Spotify, etc.)
 
+[Back to Top](#table-of-contents)
 ---
 
 ## Phase 3: Sysprep Preparation
@@ -96,7 +114,7 @@ C:\Windows\System32\sysprep\sysprep.exe /generalize /oobe /shutdown
 - Prepares for hardware detection
 - VM shuts down when complete
 
----
+[Back to Top](#table-of-contents)---
 
 ## Phase 4: VM to Physical Deployment
 
@@ -151,6 +169,7 @@ remove letter=R
 exit
 ```
 
+[Back to Top](#table-of-contents)
 ---
 
 ## Phase 5: Testing & Validation
@@ -162,6 +181,7 @@ exit
 - Verify Windows activation
 - Confirm Outlook profile/sign-in works normally
 
+[Back to Top](#table-of-contents)
 ---
 
 ## Troubleshooting Notes
@@ -180,6 +200,7 @@ exit
 - One-time hardware detection messages after first boot are normal
 - The sysprepped image adapts across different hardware
 
+[Back to Top](#table-of-contents)
 ---
 
 ## Post-Deployment User Setup
@@ -224,6 +245,7 @@ exit
 
 This workflow produces a **clean, replicable Windows 11 image** for NVMe deployment. It avoids USB blocks, TPM/SID mismatches, Outlook profile errors, and WinRE partition issues, giving users a stable baseline they can customize post-deployment.
 
+[Back to Top](#table-of-contents)
 ---
 [← Back to README](../README.md) | [Tools](tools.md)
 ---
