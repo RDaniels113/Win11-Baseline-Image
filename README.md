@@ -1,5 +1,9 @@
 # Windows 11 Baseline Image for NVMe Deployment  
 
+---
+[Full Guide](docs/Win11-Image-FullGuide.md) | [Tools](docs/tools.md)
+---
+
 ## Overview  
 This project provides a **replicable Windows 11 golden image** process using VMware Workstation, converted to NVMe drives for physical deployment. It bypasses:  
 - USB installation restrictions  
@@ -27,13 +31,10 @@ This workflow saves hours by producing a **repeatable baseline image** that scal
 
 ## Lessons Learned  
 - Never install Microsoft Store apps in the golden image — they break sysprep.  
-- Do not install VMware Tools — it causes errors after OOBE when cloned to physical hardware.  
+- Do not install VMware Tools — it causes errors after sysprep on physical hardware.  
 - Treat this like engineering, not patchwork — repeatability saves time.  
 - Disable WinRE before sysprep to prevent partition resizing issues; recreate later if needed.  
 
-## Full Guide  
-See [Full Guide](docs/Win11-Image-FullGuide.md)for detailed step-by-step instructions, troubleshooting notes, and post-deployment setup.  
-
 ---
-[← Back to README](../) |[Full Guide](docs/Win11-Image-FullGuide.md) | [Tools](tools.md)
+[Full Guide](docs/Win11-Image-FullGuide.md) | [Tools](docs/tools.md)
 ---
